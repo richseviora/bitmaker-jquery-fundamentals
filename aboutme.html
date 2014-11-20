@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>About Me</title>
+</head>
+<body>
+<h1>About Me</h1>
+
+<ul>
+    <li>Nickname: <span id="nickname"></span>
+    <li>Favorites: <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+</ul>
+<script type="text/javascript">
+//  Step 1
+    var body = document.getElementsByTagName('body')[0];
+    body.setAttribute('style','font-family: Arial, sans-serif');
+
+// Step 2
+
+document.getElementById('nickname').innerHTML = 'Skip';
+document.getElementById('favorites').innerHTML = 'Food, Cats, Gym';
+document.getElementById('hometown').innerHTML = 'Waterloo';
+
+// Step 3
+
+    var list_items = document.getElementsByTagName('li');
+    for (var i = 0; i < list_items.length; i++) {
+        list_items[i].className = 'listitem';
+    }
+    var stylesheet = document.createElement('style');
+    stylesheet.innerHTML = '.listitem {color:red;}';
+    document.head.appendChild(stylesheet);
+
+    // Step 4
+
+    var image = document.createElement('img');
+    image.src = 'https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/10628594_10154602495445571_5143093744281870035_n.jpg?oh=144175d0993b0dd0cccaeda7e6df3653&oe=54D1C83C&__gda__=1423041066_c5ba726bb415e9b752e23c663fa6a791';
+    document.body.appendChild(image);
+
+</script>
+</body>
+</html>

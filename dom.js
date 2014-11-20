@@ -6,9 +6,15 @@
 
 // Open up www.google.com in Chrome or Firefox, and open up the console.
 // Find the Google logo and store it in a variable.
+var img = document.getElementById('hplogo').getElementsByTagName('img')[0];
 // Modify the source of the logo IMG so that it's a Yahoo logo instead.
+img.src = 'http://assets.fontsinuse.com/static/use-media-items/15/14246/full-2048x768/52c4c6bc/Yahoo_Logo.png';
 // Find the Google search button and store it in a variable.
+var button = document.querySelector("[aria-label='Google Search']");
 // Modify the text of the button so that it says "Yahooo!" instead.
+document.getElementById('gbqfsa').innerHTML = 'Yahoooo!!!';
+
+
 
 // EXERCISE: About Me
 
@@ -33,10 +39,11 @@
 //  </body>
 // </html>
 
-// Add a script tag to the bottom.
-// Change the body style so it has a font-family of "Arial, sans-serif".
+// Add a script tag to the bottom. DONE
+// Change the body style so it has a font-family of "Arial, sans-serif". DONE
 // Replace each of the spans (nickname, favorites, hometown) with your own information.
 // Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
+DONE
 // Create a new img element and set its src attribute to a picture of you. Append that element to the page.
 
 // EXERCISE: The Book List

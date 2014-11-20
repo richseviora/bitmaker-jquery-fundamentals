@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .read { color: blue; }
+
+        .unread { color: red; }
+    </style>
+</head>
+<body>
+<h1>My Book List</h1>
+
+</body>
+<script>
+    // Copy from Previous Exercise
+    function Book(title, author, alreadyRead, URL) {
+        this.title = title;
+        this.author = author;
+        this.alreadyRead = alreadyRead;
+        this.URL = URL;
+        this.describe = function () {
+            if (this.alreadyRead) {
+                console.log("You already read '" + this.title + "' by " + this.author);
+            } else {
+                console.log("You still need to read '" + this.title + "' by " + this.author);
+            }
+        }
+    }
+
+    var newBook = new Book('Lord of the Rings', 'JRR Tolkien', true, 'http://canada.com');
+    var newBook1 = new Book('Whatever', 'Someone', false, 'http://google.com');
+    var bookArray = [newBook, newBook1];
+    // Current Exercise
+    var list = document.createElement('ul');
+    document.body.appendChild(list);
+    for (var i = 0; i < bookArray.length; i++) {
+        var book = bookArray[i];
+        var list_item = document.createElement('li');
+        if (book.alreadyRead) {
+            list_item.className = 'read';
+        } else {
+            list_item.className = 'unread';
+        }
+        list_item.innerHTML = book.title + ' by ' + book.author;
+        list.appendChild(list_item);
+        var book_link = document.createElement('a');
+        book_link.href = book.URL;
+        book_link.innerText = 'Homepage';
+        list_item.appendChild(book_link);
+    }
+</script>
+</html>
